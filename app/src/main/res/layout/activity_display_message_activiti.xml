@@ -8,13 +8,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="171dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="80dp"
         android:rotation="-4"
-        android:rotationX="-306"
+        android:rotationX="-4"
         android:text="TextView"
         android:textColor="#DC2525"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
