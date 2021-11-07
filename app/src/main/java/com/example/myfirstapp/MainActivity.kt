@@ -1,6 +1,7 @@
 package com.example.myfirstapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,11 +12,12 @@ import android.widget.SeekBar
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 
-class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
+class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<SeekBar>(R.id.sbWeight).setOnSeekBarChangeListener(this)
+        findViewById<View>(R.id.btn1).setOnClickListener(this)
     }
 
 
@@ -35,4 +37,11 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
     override fun onStartTrackingTouch(seekBar: SeekBar?) {}
 
     override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+    override fun onClick(v: View?) {
+        if (v != null && v.id == R.id.btn1 ) {
+            startActivity(Intent(this, ActionTwo::class.java))
+        }
+
+
+    }
 }
