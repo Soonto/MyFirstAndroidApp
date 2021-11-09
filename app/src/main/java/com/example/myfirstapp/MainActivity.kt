@@ -6,11 +6,9 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.SeekBar
-import android.widget.Toast
+import android.widget.*
 import androidx.annotation.RequiresApi
+import com.example.myfirstapp.data.Datasource
 
 class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +16,7 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, View.
         setContentView(R.layout.activity_main)
         findViewById<SeekBar>(R.id.sbWeight).setOnSeekBarChangeListener(this)
         findViewById<View>(R.id.btn1).setOnClickListener(this)
+        findViewById<TextView>(R.id.textView2).text = Datasource().loadAffirmations().size.toString()
     }
 
 
