@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">layoutBase</string>
+    <string name="textViewText">Hello</string>
+    <string name="centerNameButton">Center</string>
+</resources>
